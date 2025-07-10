@@ -1,10 +1,11 @@
 body{
-background-color: LightYellow;
-padding: 2rem;
+background-color: whitesmoke;
+padding: 1rem;
+margin-top: 1rem;
 }
 
 h1{
-    font-family: sans-serif;
+    font-family: "Avenir Next", sans-serif;
 }
 
 /* article content */
@@ -23,10 +24,39 @@ h1{
 }
 
 
-/* list-style profile pic */
-#section--images__profile ul{
+/* images (that's is NOT profile) */
+.pic-paragraph img{
+    width: 22rem;
+    height: 20rem;
+}
+
+
+
+/* the overall profile pic */
+#section-profile{
+    background: Gainsboro;
+    padding: 1em;
+}
+
+
+
+/* profile pics as a group */
+.profile-list{
     list-style: none;
+    text-align: center;
     margin: 0;
     padding: 0;
+
+}
+
+/* profile pics as an individual */
+.profile img{
+    background: PapayaWhip;
+    width: 228px;
+    height: 228px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0.7rem;
 }
 
