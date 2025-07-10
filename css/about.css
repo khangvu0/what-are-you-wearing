@@ -1,0 +1,32 @@
+body{
+background-color: LightYellow;
+padding: 2rem;
+}
+
+h1{
+    font-family: sans-serif;
+}
+
+/* article content */
+#content--about__paragraph{
+    padding: 1em;
+}
+
+
+#content--mission__paragraph{
+    padding: 1em;
+}
+
+
+#content--team__paragraph{
+    padding: 1em;
+}
+
+
+/* list-style profile pic */
+#section--images__profile ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
