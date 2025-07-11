@@ -9,14 +9,21 @@ section {
 .donation--form {
     padding: 1rem;
     display: grid;
-    grid-auto-rows: 2rem;
+    grid-auto-rows: minmax(2rem, auto); /* Ensures that the error message container fits in the form */
     grid-row-gap: 0.5rem;
-    background: pink;
+    background: lightsteelblue;
 }
 
 .form--title,
-.donation--form__checkbox {
+.donation--form__checkbox,
+.donation--error-container,
+#card,
+#card--label {
     grid-column: 1 / span 2;
+}
+
+#card {
+    margin-bottom: 0.5rem;
 }
 
 .donation--form label {
@@ -56,9 +63,6 @@ section {
     background: white;
     width: 1rem;
     height: 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 }
 
 .donation--form input[type="checkbox"]:checked {
@@ -66,22 +70,26 @@ section {
     border: #0e4f1f;
 }
 
-.donation--form input.invalid,
-.donation--form select.invalid,
-.donation--form :invalid {
-    border-color: red !important;
-    background: #faacac;
-}
-
 .donation--form input[type="submit"] {
     display: block;
     grid-column: 1 / span 2;
+    padding: 0.5rem;
+    background-color: #2ddf5c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.required-field::after {
-    content: "*";
+.donation--error {
+    grid-column: 1 / span 2;
     color: red;
-}
+    padding: 0.5rem 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}   
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .donation--form {
