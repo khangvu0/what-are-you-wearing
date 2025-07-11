@@ -1,0 +1,63 @@
+/* ------------- mobile default ------------------- */
+
+body{
+background-color: whitesmoke;
+margin-top: 1rem;
+}
+
+/* the overall article content */
+article{
+    padding: 1em;   
+}
+
+.article__heading{
+    font-family: "Avenir Next", sans-serif;
+}
+
+.article__paragraph{
+    padding-top: 1em;
+    font-size: medium;
+}
+
+.article__image{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding: auto,0;
+    width: 25rem;
+    height: 25rem;
+}
+
+
+/* the overall profile pics content */
+/* the overall profile pics */
+#card{
+    background: Gainsboro;
+    padding: 1em;
+}
+
+/* profile pics as a group */
+.card__list-profile{
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* profile pics as an individual */
+.card__image-profile img{
+    background: PapayaWhip;
+    width: 228px;
+    height: 228px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0.7rem;
+}
+
+/* profile pics names */
+.card__description-profile{
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    font-size: 20px;
+}
+
