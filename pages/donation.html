@@ -11,23 +11,25 @@
 
 <body>
     <main>
-        <section class="donation--welcome">
+        <section class="section donation--welcome">
             <h1 class="donation--welcome__title">Thank you for supporting the end of fast fashion and mitigating the harmful impacts it has on the world.</h1>
-            <p class="donation--welcome__paragraph">We're here to ...</p>
-        </section>
-        <section class="donation">
-
+            <p class="donation--welcome__paragraph">We're here for our communities, environments, and planet during this challenging time. Join us by making a donation today to ensure that we not only help clean our environment from the effects of fast fashion, but fight fast fashion at it's source to stop the exploitation of labor.</p>
+            <p class="donation--welcome__paragraph">*Only NC based donations are tax deductible.*</p>
         </section>
 
-        <section class="">
+        <section class="section">
+            <!-- Error messages will be shown here -->
+            <div class="donation--error-container">
+                <div id="donation--error" class="donation--error"></div>
+            </div>
             <form onsubmit="validate(event)" class="donation--form" id="form">
                 <h2 class="form--title">Your Information</h2>
 
                 <label for="amount">Amount</label>
                 <input type="number" id="amount" >
 
-                <label for="card" id="card--label">Card Number</label>
-                <input type="card" id="card" >
+                <label for="card">Card Number</label>
+                <input type="number" id="card" >
 
                 <label for="first-name">First name</label>
                 <input type="text" id="first-name" >
@@ -45,7 +47,7 @@
                 <input type="text" id="city" >
 
                 <label for="state">State</label>
-                <select type="text" id="state" >
+                <select id="state" >
                     <option value="">--Select State--</option>
                     <option value="NC">North Carolina</option>
                     <option value="SC">South Carolina</option>
@@ -58,19 +60,14 @@
                 <label for="phone">Phone Number</label>
                 <input type="text" id="phone" >
 
-                <div class="donation-form__checkbox">
+                <div class="donation--form__checkbox">
                     <input type="checkbox" id="agree-terms" >
                     <label for="agree-terms">Agree to
                         <a href="#">Terms &amp; Conditions</a>
                     </label>
                 </div>
 
-                <!-- Error messages will be shown here -->
-                <div class="donation--error-container">
-                    <div id="donation--error" class="donation--error"></div>
-                </div>
-
-                <input type="submit" class="button"></input>
+                <input type="submit" class="button">
             </form>
         </section>
     </main>

@@ -33,7 +33,7 @@ function validate(event){
     // Validate fields
     if (!amountRegex.test(amount)) {
         valid = false;
-        errors.push('Please enter a valid amount (e.g., 10.50)');
+        errors.push('Please enter a valid amount (e.g., 10.99)');
     }
 
     if (!cardRegex.test(card)) {
