@@ -6,7 +6,7 @@ section {
     margin-top: 2rem;
 }
 
-.donation-form {
+.donation--form {
     padding: 1rem;
     display: grid;
     grid-auto-rows: 2rem;
@@ -15,43 +15,43 @@ section {
 }
 
 .form--title,
-.donation-form__checkbox {
+.donation--form__checkbox {
     grid-column: 1 / span 2;
 }
 
-.donation-form label {
+.donation--form label {
     font-weight: bold;
 }
 
-.donation-form label,
-.donation-form input,
-.donation-form select {
+.donation--form label,
+.donation--form input,
+.donation--form select {
     display: block;
     width: 100%;
 }
 
-.donation-form input[id*="terms"],
-.donation-form input[id*="terms"] + label {
+.donation--form input[id*="terms"],
+.donation--form input[id*="terms"] + label {
     display: inline-block;
     width: auto;
     vertical-align: bottom;
 }
 
-.donation-form input:not([type="checkbox"]),
-.donation-form select {
+.donation--form input:not([type="checkbox"]),
+.donation--form select {
     border: 1px solid #ccc;
     padding: 0.2rem 0.5rem;
     font: inherit;
 }
 
-.donation-form input:focus,
-.donation-form select:focus {
+.donation--form input:focus,
+.donation--form select:focus {
     outline: none;
     background: #d8f3df;
     border-color: #2ddf5c;
 }
 
-.donation-form input[type="checkbox"] {
+.donation--form input[type="checkbox"] {
     border: 1px solid #ccc;
     background: white;
     width: 1rem;
@@ -61,19 +61,19 @@ section {
     appearance: none;
 }
 
-.donation-form input[type="checkbox"]:checked {
+.donation--form input[type="checkbox"]:checked {
     background: #2ddf5c;
     border: #0e4f1f;
 }
 
-.donation-form input.invalid,
-.donation-form select.invalid,
-.donation-form :invalid {
+.donation--form input.invalid,
+.donation--form select.invalid,
+.donation--form :invalid {
     border-color: red !important;
     background: #faacac;
 }
 
-.donation-form button[type="submit"] {
+.donation--form input[type="submit"] {
     display: block;
     grid-column: 1 / span 2;
 }
@@ -84,7 +84,7 @@ section {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .donation-form {
+    .donation--form {
         margin: auto;
         width: 30rem;
         grid-template-columns: 10rem auto;
@@ -92,11 +92,11 @@ section {
         grid-column-gap: 0.5rem;
     }
 
-    .donation-form [id="title"] {
+    .donation--form [id="title"] {
         grid-column: span 2;
     }
 
-    .donation-form__checkbox {
+    .donation--form__checkbox {
         grid-column: span 2;
     }
 }
