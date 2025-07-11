@@ -1,42 +1,55 @@
 /* CSS Reset */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Avenir Next", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: whitesmoke;
-    padding: 1rem;
-    margin-top: 1rem;
+body {
+  background-color: whitesmoke;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: "Avenir Next", sans-serif;
 }
 
 /* content */
-#content--causes__paragraph{
-    padding: 1em;
+#content--causes__paragraph {
+  padding: 1em;
 }
 
-#content--social__paragraph{
-    padding: 1em;
+#content--social__paragraph {
+  padding: 1em;
 }
 
-
-#content--solution__paragraph{
-    padding: 1em;
+#content--solutions__paragraph {
+  padding: 1em;
 }
 
+.causes--img img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.item-grid {
+  display: grid;
+}
 
 /* Practice From Zoom Meeting w Richard */
-@media (min-width: 768 px) and (max-width: 1024px){
-    body{
-        color: aliceblue
-    }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .body {
+    color: aliceblue;
+  }
+  .item-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media only screen and (min-width: 1025px){
-    body{
-        color: aliceblue
-    }
+@media screen and (min-width: 1024px) {
+  .body {
+    color: rgb(93, 158, 18);
+  }
+  .item-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
