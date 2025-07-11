@@ -1,56 +1,50 @@
+/* ------------- mobile default ------------------- */
+
 body{
 background-color: whitesmoke;
-padding: 1rem;
 margin-top: 1rem;
 }
 
-h1{
+/* the overall article content */
+article{
+    padding: 1em;   
+}
+
+.article__heading{
     font-family: "Avenir Next", sans-serif;
 }
 
-/* article content */
-#content--about__paragraph{
-    padding: 1em;
+.article__paragraph{
+    padding-top: 1em;
+    font-size: medium;
+}
+
+.article__image{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding: auto,0;
+    width: 25rem;
+    height: 25rem;
 }
 
 
-#content--mission__paragraph{
-    padding: 1em;
-}
-
-
-#content--team__paragraph{
-    padding: 1em;
-}
-
-
-/* images (that's is NOT profile) */
-.pic-paragraph img{
-    width: 22rem;
-    height: 20rem;
-}
-
-
-
-/* the overall profile pic */
-#section-profile{
+/* the overall profile pics content */
+/* the overall profile pics */
+#card{
     background: Gainsboro;
     padding: 1em;
 }
 
-
-
 /* profile pics as a group */
-.profile-list{
+.card__list-profile{
     list-style: none;
     text-align: center;
     margin: 0;
     padding: 0;
-
 }
 
 /* profile pics as an individual */
-.profile img{
+.card__image-profile img{
     background: PapayaWhip;
     width: 228px;
     height: 228px;
@@ -58,5 +52,12 @@ h1{
     border-radius: 50%;
     margin: auto;
     padding: 0.7rem;
+}
+
+/* profile pics names */
+.card__description-profile{
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    font-size: 20px;
 }
 
