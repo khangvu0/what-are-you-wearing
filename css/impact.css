@@ -1,8 +1,42 @@
+/* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Avenir Next", sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* content */
+#content--causes__paragraph{
+    padding: 1em;
+}
+
+#content--social__paragraph{
+    padding: 1em;
+}
+
+
+#content--solution__paragraph{
+    padding: 1em;
+}
+
 
 /* Practice From Zoom Meeting w Richard */
-
-@media all{
+@media (min-width: 768 px) and (max-width: 1024px){
     body{
-        color: 
+        color: aliceblue
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    body{
+        color: aliceblue
     }
 }
