@@ -1,26 +1,31 @@
 body {
     font-family: "Avenir Next", sans-serif;
+    background-color: whitesmoke;
 }
 
 /*-------------- header code ---------------*/
 header {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     border-bottom: 1px solid lightgrey;
     box-shadow: 0 6px 15px 0 rgba(174, 209, 255, 0.274);
 }
 
 ul {
     list-style-type: none;
+    display: flex;
+    gap: 0.3em;
 }
 
 #header-logo {
-    width: 10em;
+    width: 12em;
     height: 7em;
 }
 
 li {
-    padding: 1em;
+    padding: 0.5em;
+    margin: 0.5em 0;
 }
 
 .link__page:hover {
@@ -28,11 +33,21 @@ li {
     text-decoration: underline;
 }
 
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
 #donate {
     font-weight: bold;
     background-color: rgb(255, 200, 0);
     border-radius: 30px;
 }
+
 /*-------------- main section code ---------------*/
 main {
     padding: 1rem 0;
@@ -87,14 +102,14 @@ footer {
 }
 
 #footer-logo {
-    width: 11em;
+    width: 12em;
     height: 8em;
 }
 
 /*-------------- media query code for tablet ---------------*/
 @media all and (min-width: 768px) {
     ul {
-        display: flex;
+        /* display: flex; */
         gap: 2em;
     }
 
