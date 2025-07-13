@@ -3,7 +3,7 @@ body {
     background-color: whitesmoke;
 }
 
-/*-------------- header code ---------------*/
+/*-------------- header code (moved to shared.css) ---------------
 header {
     display: flex;
     flex-direction: column;
@@ -12,18 +12,18 @@ header {
     box-shadow: 0 6px 15px 0 rgba(174, 209, 255, 0.274);
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    gap: 0.3em;
-}
-
 #header-logo {
     width: 12em;
     height: 7em;
 }
 
-li {
+.shared__ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.3em;
+}
+
+.link__page {
     padding: 0.5em;
     margin: 0.5em 0;
 }
@@ -47,6 +47,7 @@ a:visited {
     background-color: rgb(255, 200, 0);
     border-radius: 30px;
 }
+*/
 
 /*-------------- main section code ---------------*/
 main {
@@ -84,7 +85,7 @@ main {
     margin: 0 auto;
 }
 
-/*-------------- footer code ---------------*/
+/*-------------- footer code (moved to shared.css) ---------------
 footer {
     padding: 1em;
     display: grid;
@@ -105,18 +106,18 @@ footer {
     width: 12em;
     height: 8em;
 }
+*/
 
 /*-------------- media query code for tablet ---------------*/
 @media all and (min-width: 768px) {
-    ul {
-        /* display: flex; */
+    /*.shared__ul {
         gap: 2em;
     }
 
-    nav {
+    .shared__nav {
         display: flex;
         align-items: center;
-    }
+    } */
 
     #grid-section {
         display: flex;
@@ -129,9 +130,9 @@ footer {
         width: 20em;
     }
 
-    footer {
+    /*footer {
         padding: 2em;
-    }
+    }*/
 }
 
 /*-------------- media query code for desktop ---------------*/
@@ -154,9 +155,9 @@ footer {
         width: 30em;
     }
 
-    footer {
+    /*footer {
         display: flex;
         justify-content: space-around;
         align-items: end;
-    }
+    }*/
 }
