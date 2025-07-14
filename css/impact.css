@@ -14,26 +14,90 @@ body {
 }
 
 /* content */
-#content--causes__paragraph {
+#content__causes--paragraph {
   padding: 1em;
 }
 
-#content--social__paragraph {
-  padding: 1em;
+.heading__causes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; 
+    margin-bottom: 35px;
 }
 
-#content--solutions__paragraph {
-  padding: 1em;
+.heading__causes h2{
+    padding: 0.5em;
 }
 
-.causes--img img {
+.heading__causes p{
+    text-align: justify;
+}
+
+.causes__point h3{
+    padding: 0.5em;
+}
+
+.causes__point h6{
+    padding: 2em;
+    color: lightseagreen;
+}
+.causes__point{
+    float: left;
+    padding: 1rem
+
+}
+
+  .causes__img img {
   width: 100%;
   margin: 0 auto;
+  display: block;
+  padding: 0 1em;
+  float: right;
+  }
+
+#content__social--paragraph {
+  padding: 1em;
 }
 
-.item-grid {
-  display: grid;
+.social__point h3{
+    padding: 0.5em;
 }
+
+.social__point h6{
+    padding: 2em;
+    color: lightseagreen;
+}
+
+.social__point{
+    float: left;
+    padding: 1rem
+}
+
+
+.causes__social{
+    display: grid;
+    transition: 0.5s ease;
+}
+
+#content__solutions--paragraph {
+  padding: 1em;
+  width: 100%;
+}
+
+.solutions__point h3{
+    padding: 0.5em;
+}
+
+
+.solutions__point {
+    display: grid;
+    transition: 0.5s ease;
+}
+
+
 
 /* Practice From Zoom Meeting w Richard */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -43,13 +107,35 @@ body {
   .item-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
+
 
 @media screen and (min-width: 1024px) {
   .body {
     color: rgb(93, 158, 18);
   }
+
   .item-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .causes__point{
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin: 0 1em;
 }
+  .social__point{
+    width: 50%;
+    float: left;
+    text-align: left;
+    margin: 0 1em;
+}
+
+  .container{
+    display: block;
+    flex-direction: column;
+  }
+}
+
