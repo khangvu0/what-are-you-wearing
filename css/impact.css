@@ -85,6 +85,8 @@ body {
 #content__solutions--paragraph {
   padding: 1em;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .solutions__point h3{
