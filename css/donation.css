@@ -79,6 +79,10 @@ p {
     height: 1rem;
 }
 
+.donation--form__checkbox a{
+    color: blue;
+}
+
 .donation--form input[type="submit"] {
     grid-column: 1 / span 2;
     padding: 0.5rem;
