@@ -1,0 +1,163 @@
+body {
+    font-family: "Avenir Next", sans-serif;
+    background-color: whitesmoke;
+}
+
+/*-------------- header code (moved to shared.css) ---------------
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 6px 15px 0 rgba(174, 209, 255, 0.274);
+}
+
+#header-logo {
+    width: 12em;
+    height: 7em;
+}
+
+.shared__ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.3em;
+}
+
+.link__page {
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.link__page:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+#donate {
+    font-weight: bold;
+    background-color: rgb(255, 200, 0);
+    border-radius: 30px;
+}
+*/
+
+/*-------------- main section code ---------------*/
+main {
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 6px 15px 0 rgba(174, 209, 255, 0.274);
+}
+
+#main-img {
+    width: 100vw;
+    margin: 0 auto;
+}
+
+#info-header {
+    border-bottom: 5px solid rgb(255, 200, 0);
+}
+
+#info-header, #info-description {
+    margin: 0 auto;
+}
+
+#grid-section {
+    display: grid;
+    padding: 0.8em;
+    grid-row-gap: 1rem;
+}
+
+#about-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#un-img {
+    margin: 0 auto;
+}
+
+/*-------------- footer code (moved to shared.css) ---------------
+footer {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1em;
+}
+
+#footer-right p {
+    font-size: 11px;
+}
+
+#footer-mid {
+    display: flex;
+    justify-content: end;
+}
+
+#footer-logo {
+    width: 12em;
+    height: 8em;
+}
+*/
+
+/*-------------- media query code for tablet ---------------*/
+@media all and (min-width: 768px) {
+    /*.shared__ul {
+        gap: 2em;
+    }
+
+    .shared__nav {
+        display: flex;
+        align-items: center;
+    } */
+
+    #grid-section {
+        display: flex;
+        margin: 0 auto;
+        gap: 3em;
+        text-align: center;
+    }
+
+    #un-img {
+        width: 20em;
+    }
+
+    /*footer {
+        padding: 2em;
+    }*/
+}
+
+/*-------------- media query code for desktop ---------------*/
+@media all and (min-width: 1025px) {
+    #main-img {
+        padding: 1em;
+        height: 55em;
+    }
+
+    #info-description {
+        font-size: 20px;
+    }
+
+    #grid-section {
+        width: 70em;
+        gap: 5em;
+    }
+
+    #un-img {
+        width: 30em;
+    }
+
+    /*footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    }*/
+}

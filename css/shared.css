@@ -17,3 +17,96 @@ h2 {
 p {
     font-size: 1rem;
 }
+
+/*-------------- shared header code ---------------*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0 6px 15px 0 rgba(174, 209, 255, 0.274);
+}
+
+#header-logo {
+    width: 12em;
+    height: 7em;
+}
+
+.shared__ul {
+    list-style-type: none;
+    display: flex;
+    gap: 0.3em;
+}
+
+.link__page {
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+
+.link__page:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+#donate {
+    font-weight: bold;
+    background-color: rgb(255, 200, 0);
+    border-radius: 30px;
+}
+
+/*-------------- shared footer code ---------------*/
+footer {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1em;
+}
+
+#footer-right p {
+    font-size: 11px;
+}
+
+#footer-mid {
+    display: flex;
+    justify-content: end;
+}
+
+#footer-logo {
+    width: 12em;
+    height: 8em;
+}
+
+/*-------------- media query header/footer code for tablet ---------------*/
+@media all and (min-width: 768px) {
+    .shared__ul {
+        /* display: flex; */
+        gap: 2em;
+    }
+
+    .shared__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    footer {
+        padding: 2em;
+    }
+}
+
+/*-------------- media query footer code for desktop ---------------*/
+@media all and (min-width: 1025px) {
+    footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+        }
+}
