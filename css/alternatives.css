@@ -1,25 +1,11 @@
 body {
     font-family: "Avenir", sans-serif;
     background-color: whitesmoke;
-    margin: 0;
-    padding: 0;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
 }
 
-/* h1 {
-    background-color: rgb(255, 255, 255);
-    padding: 1.5rem;
-    text-align: center;
-} */
-
 .title__box {
-    font-size: 2rem;
     padding: 1em;
     margin: 0;
-    color: rgb(34, 34, 34);
     letter-spacing: 0.02rem;
     text-align: center;
 }
@@ -36,7 +22,6 @@ body {
 }
 
 .alternative__box {
-    color: rgb(34, 34, 34);
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -57,12 +42,11 @@ p {
 .section__grid {
     text-align: center;
     padding: 2rem;
-    background: rgb(255, 255, 255);
+    background: whitesmoke;
     margin-top: 3rem;
 }
 
 .section__grid h2 {
-    color: rgb(34, 34, 34);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -85,7 +69,6 @@ p {
 }
 
 .brands__list h3 {
-    color: rgb(51, 51, 51);
     margin: 0.5rem 0;
 }
 
@@ -96,9 +79,6 @@ p {
 /* Mobile media query */
 
 @media (max-width: 768px) {
-    body {
-        font-size: 1rem;
-    }
 
     .title__box {
         font-size: 2rem;
@@ -120,12 +100,8 @@ p {
 
 /* Tablet media query */
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    body {
-        font-size: 1.1rem;
-    }
-
-
+@media (min-width: 768px) and (max-width: 1024px) {
+   
     .alternative__box {
         font-size: 1.8rem;
     }
@@ -142,11 +118,7 @@ p {
 
 /* Desktop media query */
 
-@media (min-width: 1025px) {
-    body {
-        font-size: 1.2rem;
-    }
-
+@media (min-width: 1024px) {
     .alternative__box {
         font-size: 2rem;
     }
