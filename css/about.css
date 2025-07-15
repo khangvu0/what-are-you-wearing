@@ -1,0 +1,247 @@
+/* -------------------------- MOBILE DESIGN (DEFAULT) ---------------------------------- */
+
+body{
+background-color: whitesmoke;
+font-family: "Avenir Next", sans-serif;
+margin-top: 1rem;
+}
+
+/* the overall article content */
+article{
+    padding: 1em;   
+}
+
+.article__heading{
+    font-size: 8rem, larger;
+}
+
+.article__paragraph{
+    padding-top: 1em;
+    font-size: medium;
+}
+
+.article__image{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding: auto,0;
+    width: 25rem;
+    height: 25rem;
+}
+
+
+/* the overall profile pics content */
+/* the overall profile pics */
+#card{
+    background: Gainsboro;
+    padding: 1em;
+}
+
+/* profile pics as a group */
+.card__list-profile{
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* profile pics as an individual */
+.card__image-profile img{
+    background: PapayaWhip;
+    width: 228px;
+    height: 228px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0.7rem;
+}
+
+/* profile pics names */
+.card__description-profile{
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    font-size: 20px;
+}
+
+/* -------------------------- TABLET DESIGN ---------------------------------- */
+@media screen and (min-width: 600px) and (max-height:1024px){
+
+/* the ABOUT US content */
+    #article__about-content--group{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 1em;
+    }
+
+    .card__about-content{
+        text-align: left;
+        padding: 1rem;
+        /*background-color: lime;*/
+    }
+
+    .card__about-image{
+        max-width: 100%;
+        height: auto;
+        padding-top: 3em;
+        /*background-color: green;*/
+    }
+
+    .card__about-image img{
+        width: 20rem;
+        height: 20rem;
+        /*background-color: greenyellow;*/
+    }
+
+/* the MISSION & VALUES content */
+    #article__mission-content--group{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        padding-top: 2.5em;
+    }
+
+    .card__mission-content{
+        text-align: right;
+        padding: 1rem;
+        /*background-color: skyblue;*/
+    }
+
+    .card__mission-image{
+       max-width: 100%;
+       height: auto; 
+       padding-bottom: 1em;
+       /*background-color: navy;*/
+    }
+
+     .card__mission-image img{
+        width: 20rem;
+        height: 20rem;
+        /*background-color: blue;*/
+    }
+
+/* the MEET THE TEAM content */
+    #article__team-content--group{
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        padding: 1rem;
+        /*background-color: plum;*/
+    }
+
+   .card__team-content{
+        text-align: center;
+   }
+
+   /* the PROFILE PHOTOS content */
+    .card__list-profile{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 2rem;
+        
+    }
+        
+    .card__description-profile{
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        align-items: flex-end;
+        text-align: center;
+    }
+    
+}
+
+
+/* -------------------------- LAPTOP (LARGE) DESIGN ---------------------------------- */
+@media screen and (min-width: 1024px) and (max-width:1440px){
+
+    /* the ABOUT US content */
+    #article__about-content--group{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1em;
+    }
+
+    .card__about-content h1{
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .card__about-content p{
+        text-align: left;
+        padding: 0.5rem;
+        font-size: 20px;
+    }
+
+    .card__about-image{
+        max-width: 100%;
+        height: auto;
+        padding-top: 3em;
+        padding: 3rem;
+    }
+
+    .card__about-image img{
+        width: 35rem;
+        height: 25rem;
+    }
+
+/* the MISSION & VALUES content */
+    #article__mission-content--group{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 1em;
+    }
+
+    .card__mission-content h1{
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .card__mission-content p{
+        text-align: left;
+        padding: 0.5rem;
+        font-size: 20px;
+    }
+
+    .card__mission-image{
+       max-width: 100%;
+       height: auto; 
+       padding-bottom: 3em;
+       padding: 2rem;
+    }
+
+     .card__mission-image img{
+        width: 35rem;
+        height: 25rem;
+    }
+
+/* the MEET THE TEAM content */
+    #article__team-content--group{
+        padding-top: 1em;
+        padding-bottom: 1.5em;
+        padding: 1rem;
+    }
+
+   .card__team-content p{
+        text-align: center;
+        font-size: 20px;
+   }
+
+/* the PROFILE PHOTOS content */
+    .card__list-profile{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding: 2rem;
+    }
+        
+    .card__description-profile{
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        align-items: flex-end;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+}
