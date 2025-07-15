@@ -4,7 +4,6 @@
 
 body{
     background-color: whitesmoke;
-    margin-top: 1rem;
 }
 
 main {
@@ -17,7 +16,7 @@ main {
 }
 
 p {
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .donation--error {
@@ -28,11 +27,36 @@ p {
 
 .donation--form {
     padding: 1rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-auto-rows: minmax(2rem, auto);
     grid-row-gap: 0.5rem;
     background: papayawhip;
     margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+.form--group {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation--card-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#card-container,
+#email-container,
+#phone-container,
+#address-container,
+#city-container {
+    grid-column: 1 / span 2;
+}
+
+.donation--your-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .form--title,
@@ -52,6 +76,7 @@ p {
 .donation--form select {
     display: inline-block;
     width: 100%;
+    border-radius: 5px;
 }
 
 .donation--form input[id*="terms"],
@@ -64,14 +89,7 @@ p {
 .donation--form input:not([type="checkbox"]),
 .donation--form select {
     border: 1px solid #ccc;
-    padding: 0.2rem 0.5rem;
-}
-
-.donation--form input:focus,
-.donation--form select:focus {
-    outline: none;
-    background: #d8f3df;
-    border-color: #2ddf5c;
+    padding: 0.6rem 0.5rem;
 }
 
 .donation--form input[type="checkbox"] {
@@ -88,13 +106,25 @@ p {
     padding: 0.5rem;
     font-weight: bold;
     border-radius: 5px;
+    max-width: 30 vwß;
+    background-color: whitesmoke;
+}
+
+.input-valid {
+    border: 1px solid green;
+    background-color: lightgreen;
+}
+
+.input-invalid {
+    border: 1px solid red;
+    background-color: rgb(245, 112, 112);
 }
 
 /* For tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     .donation--form {
         margin: auto auto 2rem auto;
-        width: 30rem;
+        width: 80vw;
         grid-template-columns: 10rem auto;
         grid-row-gap: 1rem;
         grid-column-gap: 0.5rem;
@@ -121,10 +151,17 @@ p {
 @media screen and (min-width: 1024px) {
     .donation--form {
         margin: auto auto 2rem auto;
-        width: 30rem;
-        grid-template-columns: 10rem auto;
+        width: 60vw;
+        /* grid-template-columns: 10rem auto;
         grid-row-gap: 1rem;
-        grid-column-gap: 0.5rem;
+        grid-column-gap: 0.5rem; */
+    }
+
+    #email-container,
+    #phone-container,
+    #address-container,
+    #city-container {
+        grid-column: unset;
     }
 
     .donation--welcome,
