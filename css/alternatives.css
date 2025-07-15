@@ -1,6 +1,6 @@
 body {
     font-family: "Avenir", sans-serif;
-    background-color: rgb(248, 246, 243);
+    background-color: whitesmoke;
     margin: 0;
     padding: 0;
     font-size: 1.1rem;
@@ -9,17 +9,19 @@ body {
     line-height: 1.6;
 }
 
-h1 {
+/* h1 {
     background-color: rgb(255, 255, 255);
     padding: 1.5rem;
     text-align: center;
-}
+} */
 
 .title__box {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    padding: 1em;
     margin: 0;
     color: rgb(34, 34, 34);
     letter-spacing: 0.02rem;
+    text-align: center;
 }
 
 .alternative__section {
@@ -123,9 +125,6 @@ p {
         font-size: 1.1rem;
     }
 
-    .title__box {
-        font-size: 2.3rem;
-    }
 
     .alternative__box {
         font-size: 1.8rem;
@@ -148,9 +147,7 @@ p {
         font-size: 1.2rem;
     }
 
-    .title__box {
-        font-size: 2.5rem;
-    }
-
     .alternative__box {
         font-size: 2rem;
+    }
+}
