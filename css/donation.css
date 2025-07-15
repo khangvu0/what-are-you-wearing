@@ -72,7 +72,7 @@ p {
 .donation--form input:not([type="checkbox"]),
 .donation--form select {
     border: 1px solid #ccc;
-    padding: 0.2rem 0.5rem;
+    padding: 0.6rem 0.5rem;
 }
 
 .donation--form input[type="checkbox"] {
@@ -89,6 +89,7 @@ p {
     padding: 0.5rem;
     font-weight: bold;
     border-radius: 5px;
+    max-width: 30 vwß;
 }
 
 .input-valid {
