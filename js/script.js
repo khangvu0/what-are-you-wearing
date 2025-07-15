@@ -1,6 +1,15 @@
+// Error function - passes in id from validate function and spits out corresponding message
+function showError(id, message) {
+    const errorDiv = document.getElementById(`error-${id}`);
+    if (errorDiv) {
+        errorDiv.textContent = message;
+    }
+}
+
 // Validation function
 function validate(event){
     event.preventDefault(); // Prevent form submission to handle validation first
+    document.querySelectorAll('.error-message').forEach(div => div.textContent = '');
 
     // Form value variables
     const form = document.getElementById('form').value;
@@ -33,57 +42,72 @@ function validate(event){
     // Validate fields
     if (!amountRegex.test(amount)) {
         valid = false;
-        errors.push('Please enter a valid amount (e.g., 10.99)');
+        // errors.push('Please enter a valid amount (e.g., 10.99)');
+        showError('amount', 'Please enter a valid amount (e.g., 10.99)');
+        //remove green
+        
+
+        //add red
     }
 
     if (!cardRegex.test(card)) {
         valid = false;
-        errors.push('Please enter a valid card (Visa, Mastercard, American Express and Discover)');
+        // errors.push('Please enter a valid card (Visa, Mastercard, American Express and Discover)');
+        showError('card', 'Please enter a valid card number');
     }
 
     if (!nameRegex.test(firstName)) {
         valid = false;
-        errors.push('First name must be between 2 and 12 alphabetic characters.');
+        // errors.push('First name must be between 2 and 12 alphabetic characters.');
+        showError('first-name', 'First name must be 2-12 letters');
     }
 
     if (!nameRegex.test(lastName)) {
         valid = false;
-        errors.push('Last name must be between 2 and 12 alphabetic characters.');
+        // errors.push('Last name must be between 2 and 12 alphabetic characters.');
+        showError('last-name', 'Last name must be 2-12 letters');
     }
 
     if (!emailRegex.test(email)) {
         valid = false;
-        errors.push('Please enter a valid email address.');
+        // errors.push('Please enter a valid email address.');
+        showError('email', 'Please enter a valid email address');
     }
 
     if (!addressRegex.test(address)) {
         valid = false;
-        errors.push('Please enter a valid address.');
+        // errors.push('Please enter a valid address.');
+        showError('address', 'Please enter a valid address');
     }
 
     if (!cityRegex.test(city)) {
         valid = false;
-        errors.push('Please enter a valid city.');
+        // errors.push('Please enter a valid city.');
+        showError('city', 'Please enter a valid city');
     }
 
     if (!state) {
         valid = false;
-        errors.push('Please select a valid state.');
+        // errors.push('Please select a valid state.');
+        showError('state', 'Please enter a valid state');
     }
 
     if (!zipRegex.test(zip)) {
         valid = false;
-        errors.push('Please enter a valid ZIP code.');
+        // errors.push('Please enter a valid ZIP code.');
+        showError('zip', 'Please enter a valid zip');
     }
 
     if (!phoneRegex.test(phone)) {
         valid = false;
-        errors.push('Please enter a valid phone number.');
+        // errors.push('Please enter a valid phone number.');
+        showError('phone', 'Please enter a valid phone number');
     }
 
     if (!agreeTerms) {
         valid = false;
-        errors.push('You must agree to the terms and conditions.');
+        // errors.push('You must agree to the terms and conditions.');
+        showError('terms', 'You must agree to the terms and conditions');
     }
 
     // Display errors
