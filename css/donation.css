@@ -75,20 +75,6 @@ p {
     padding: 0.2rem 0.5rem;
 }
 
-.donation--form input:focus,
-.donation--form select:focus {
-    outline: none;
-    background: #d8f3df;
-    border-color: #2ddf5c;
-}
-
-.donation--form__error input:focus,
-.donation--form__error select:focus {
-    outline: none;
-    background: lightcoral;
-    border-color: red;
-}
-
 .donation--form input[type="checkbox"] {
     width: 1rem;
     height: 1rem;
@@ -103,6 +89,16 @@ p {
     padding: 0.5rem;
     font-weight: bold;
     border-radius: 5px;
+}
+
+.input-valid {
+    border: 1px solid green;
+    background-color: lightgreen;
+}
+
+.input-invalid {
+    border: 1px solid red;
+    background-color: rgb(245, 112, 112);
 }
 
 /* For tablet */

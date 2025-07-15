@@ -1,35 +1,28 @@
-// Error function - passes in id from validate function and spits out corresponding message
-function showError(id, message) {
-    const errorDiv = document.getElementById(`error-${id}`);
-    if (errorDiv) {
-        errorDiv.textContent = message;
-    }
-}
-
 // Validation function
 function validate(event){
     // Prevent form submission to handle validation first
     event.preventDefault(); 
 
     // Clears up previous error messages
+    // For each div in the loop, set text content to null
     document.querySelectorAll('.donation--error').forEach(div => div.textContent = '');
 
     // Form value variables
-    const form = document.getElementById('form').value;
-    const amount = document.getElementById('amount').value;
-    const card = document.getElementById('card').value;
-    const firstName = document.getElementById('first-name').value;
-    const lastName = document.getElementById('last-name').value;
-    const email = document.getElementById('email').value;
-    const address = document.getElementById('address').value;
-    const city = document.getElementById('city').value;
-    const state = document.getElementById('state').value;
-    const zip = document.getElementById('zip').value;
-    const phone = document.getElementById('phone').value;
-    const agreeTerms = document.getElementById('agree-terms').checked;
+    const form = document.getElementById('form');
+    const amount = document.getElementById('amount');
+    const card = document.getElementById('card');
+    const firstName = document.getElementById('first-name');
+    const lastName = document.getElementById('last-name');
+    const email = document.getElementById('email');
+    const address = document.getElementById('address');
+    const city = document.getElementById('city');
+    const state = document.getElementById('state');
+    const zip = document.getElementById('zip');
+    const phone = document.getElementById('phone');
+    const agreeTerms = document.getElementById('agree-terms');
 
     // Regular expression variables
-    const amountRegex = /^[+]?([0-9]+(?:[\.][0-9]{1,2})?|\.[0-9]{1,2})$/; 
+    const amountRegex = /^(?!0*(?:\.0{1,2})?$)(?:\d+|\.\d{1,2}|\d+\.\d{1,2})$/; 
     const cardRegex = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})$/;
     const nameRegex = /^[a-zA-Z]{2,12}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -42,84 +35,126 @@ function validate(event){
     let valid = true;
 
     // Validate fields
-    if (!amountRegex.test(amount)) {
+    if (!amountRegex.test(amount.value) || parseFloat(amount.value) <= 0) {     //parseFloat converts string to float
         valid = false;
-        // errors.push('Please enter a valid amount (e.g., 10.99)');
         showError('amount', 'Please enter a valid amount (e.g., 10.99)');
-        //remove green
-        
-
-        //add red
+        amount.classList.remove('input-valid');     //removes green/valid css styling
+        amount.classList.add('input-invalid');      //adds red/invalid css styling
+    } else {
+        amount.classList.remove('input-invalid');   //removes red/invalid css styling
+        amount.classList.add('input-valid');        //adds green/valid css styling
     }
 
-    if (!cardRegex.test(card)) {
+    if (!cardRegex.test(card.value)) {
         valid = false;
-        // errors.push('Please enter a valid card (Visa, Mastercard, American Express and Discover)');
-        showError('card', 'Please enter a valid card number');
+        showError('card', 'Please enter a valid card (Visa, Mastercard, American Express and Discover).');
+        card.classList.remove('input-valid');
+        card.classList.add('input-invalid');
+    } else {
+        card.classList.remove('input-invalid');
+        card.classList.add('input-valid');
     }
 
-    if (!nameRegex.test(firstName)) {
+    if (!nameRegex.test(firstName.value)) {
         valid = false;
-        // errors.push('First name must be between 2 and 12 alphabetic characters.');
-        showError('first-name', 'First name must be 2-12 letters');
+        showError('first-name', 'First name must be between 2 and 12 letters.');
+        firstName.classList.remove('input-valid');
+        firstName.classList.add('input-invalid');
+    } else {
+        firstName.classList.remove('input-invalid');
+        firstName.classList.add('input-valid');
     }
 
-    if (!nameRegex.test(lastName)) {
+    if (!nameRegex.test(lastName.value)) {
         valid = false;
-        // errors.push('Last name must be between 2 and 12 alphabetic characters.');
-        showError('last-name', 'Last name must be 2-12 letters');
+        showError('last-name', 'Last name must be between 2 and 12 letters.');
+        lastName.classList.remove('input-valid');
+        lastName.classList.add('input-invalid');
+    } else {
+        lastName.classList.remove('input-invalid');
+        lastName.classList.add('input-valid');
     }
 
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(email.value)) {
         valid = false;
-        // errors.push('Please enter a valid email address.');
-        showError('email', 'Please enter a valid email address');
+        showError('email', 'Please enter a valid email address.');
+        email.classList.remove('input-valid');
+        email.classList.add('input-invalid');
+    } else {
+        email.classList.remove('input-invalid');
+        email.classList.add('input-valid');
     }
 
-    if (!addressRegex.test(address)) {
+    if (!addressRegex.test(address.value)) {
         valid = false;
-        // errors.push('Please enter a valid address.');
-        showError('address', 'Please enter a valid address');
+        showError('address', 'Please enter a valid address.');
+        address.classList.remove('input-valid');
+        address.classList.add('input-invalid');
+    } else {
+        address.classList.remove('input-invalid');
+        address.classList.add('input-valid');
     }
 
-    if (!cityRegex.test(city)) {
+    if (!cityRegex.test(city.value)) {
         valid = false;
-        // errors.push('Please enter a valid city.');
-        showError('city', 'Please enter a valid city');
+        showError('city', 'Please enter a valid city.');
+        city.classList.remove('input-valid');
+        city.classList.add('input-invalid');
+    } else {
+        city.classList.remove('input-invalid');
+        city.classList.add('input-valid');
     }
 
-    if (!state) {
+    if (!state.value) {
         valid = false;
-        // errors.push('Please select a valid state.');
-        showError('state', 'Please enter a valid state');
+        showError('state', 'Please enter a valid state.');
+        state.classList.remove('input-valid');
+        state.classList.add('input-invalid');
+    } else {
+        state.classList.remove('input-invalid');
+        state.classList.add('input-valid');
     }
 
-    if (!zipRegex.test(zip)) {
+    if (!zipRegex.test(zip.value)) {
         valid = false;
-        // errors.push('Please enter a valid ZIP code.');
-        showError('zip', 'Please enter a valid zip');
+        showError('zip', 'Please enter a valid ZIP code.');
+        zip.classList.remove('input-valid');
+        zip.classList.add('input-invalid');
+    } else {
+        zip.classList.remove('input-invalid');
+        zip.classList.add('input-valid');
     }
 
-    if (!phoneRegex.test(phone)) {
+    if (!phoneRegex.test(phone.value)) {
         valid = false;
-        // errors.push('Please enter a valid phone number.');
-        showError('phone', 'Please enter a valid phone number');
+        showError('phone', 'Please enter a valid phone number.');
+        phone.classList.remove('input-valid');
+        phone.classList.add('input-invalid');
+    } else {
+        phone.classList.remove('input-invalid');
+        phone.classList.add('input-valid');
     }
 
-    if (!agreeTerms) {
+    if (!agreeTerms.checked) {
         valid = false;
-        // errors.push('You must agree to the terms and conditions.');
-        showError('terms', 'You must agree to the terms and conditions');
+        showError('terms', 'You must agree to the terms and conditions.');
+        agreeTerms.classList.remove('input-valid');
+        agreeTerms.classList.add('input-invalid');
+    } else {
+        agreeTerms.classList.remove('input-invalid');
+        agreeTerms.classList.add('input-valid');
     }
 
-    if (!valid) {
-        errors.forEach((error) => {
-            const errorElement = document.createElement('div');
-            errorElement.classList.add('error');
-            errorElement.textContent = error;
-            errorMessages.appendChild(errorElement);
-        });
+    if (valid) { 
+        alert('Form submitted successfully'); 
+        document.getElementById('form').reset();    //resets form
     }
+}
 
-    if (valid) { alert('Form submitted successfully'); }
+// Error function - passes in id from validate function and spits out corresponding message
+function showError(id, message) {
+    const errorDiv = document.getElementById(`error-${id}`);
+    if (errorDiv) {
+        errorDiv.textContent = message;
+    }
 }

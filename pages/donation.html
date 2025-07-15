@@ -32,16 +32,12 @@
         </section>
 
         <section class="section">
-            <!-- Error messages will be shown here -->
-            <!-- <div class="donation--error-container">
-                <div id="donation--error" class="donation--error"></div>
-            </div> -->
             <form onsubmit="validate(event)" class="donation--form" id="form">
                 <h2 class="form--title">Your Information</h2>
 
                 <div class="form--group">
                     <label for="amount">Amount</label>
-                    <input type="number" id="amount" >
+                    <input type="text" id="amount">
                     <div class="donation--error" id="error-amount"></div>
                 </div>
 
@@ -65,7 +61,7 @@
 
                 <div class="form--group">
                     <label for="email">E-Mail</label>
-                    <input type="email" id="email" >
+                    <input type="text" id="email" >
                     <div class="donation--error" id="error-email"></div>
                 </div>
 
