@@ -28,6 +28,12 @@ body {
   margin-bottom: 35px;
 }
 
+.heading__causes h1 {
+  padding: 0.5em;
+  color: black;
+  text-shadow: 1px 1px 4px rgb(246, 246, 48);
+}
+
 .heading__causes h2 {
   padding: 0.5em;
 }
@@ -58,6 +64,11 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 1em;
+  transition: .5s ease;
+}
+
+.causes__img:hover {
+  opacity: 0.7;
 }
 
 #content__social--paragraph {
@@ -93,6 +104,11 @@ body {
 .solutions__point h3 {
   padding: 0.5em;
   text-align: justify;
+}
+
+.solutions__point {
+  float: left;
+  padding: 1rem;
 }
 
 /* Practice From Zoom Meeting w Richard */
