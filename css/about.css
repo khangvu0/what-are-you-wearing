@@ -21,6 +21,9 @@ article{
 }
 
 .article__image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 1rem;
     padding-bottom: 2rem;
     padding: auto,0;
@@ -63,7 +66,7 @@ article{
 }
 
 /* -------------------------- TABLET DESIGN ---------------------------------- */
-@media screen and (min-width: 600px) and (max-height:1024px){
+@media screen and (min-width: 600px) and (max-height:1440px){
 
 /* the ABOUT US content */
     #article__about-content--group{
@@ -75,20 +78,17 @@ article{
     .card__about-content{
         text-align: left;
         padding: 1rem;
-        /*background-color: lime;*/
     }
 
     .card__about-image{
         max-width: 100%;
         height: auto;
         padding-top: 3em;
-        /*background-color: green;*/
     }
 
     .card__about-image img{
         width: 20rem;
         height: 20rem;
-        /*background-color: greenyellow;*/
     }
 
 /* the MISSION & VALUES content */
@@ -102,20 +102,17 @@ article{
     .card__mission-content{
         text-align: right;
         padding: 1rem;
-        /*background-color: skyblue;*/
     }
 
     .card__mission-image{
        max-width: 100%;
        height: auto; 
        padding-bottom: 1em;
-       /*background-color: navy;*/
     }
 
      .card__mission-image img{
         width: 20rem;
         height: 20rem;
-        /*background-color: blue;*/
     }
 
 /* the MEET THE TEAM content */
@@ -123,7 +120,6 @@ article{
         padding-top: 1.5em;
         padding-bottom: 1.5em;
         padding: 1rem;
-        /*background-color: plum;*/
     }
 
    .card__team-content{
@@ -150,9 +146,8 @@ article{
     
 }
 
-
-/* -------------------------- LAPTOP (LARGE) DESIGN ---------------------------------- */
-@media screen and (min-width: 1024px) and (max-width:1440px){
+/* -------------------------- LAPTOP (SMALL) DESIGN ---------------------------------- */
+@media screen and (min-width: 1024px) and (max-width:1440){
 
     /* the ABOUT US content */
     #article__about-content--group{
@@ -222,6 +217,10 @@ article{
         padding: 1rem;
     }
 
+    .card__team-content h1{
+        text-align: center;
+   }
+
    .card__team-content p{
         text-align: center;
         font-size: 20px;
@@ -233,6 +232,109 @@ article{
         justify-content: space-evenly;
         flex-direction: row;
         padding: 2rem;
+    }
+        
+    .card__description-profile{
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        align-items: flex-end;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+}
+
+/* -------------------------- LAPTOP (LARGER) DESIGN ---------------------------------- */
+@media screen and (min-width: 1440px) and (max-width:1800px){
+
+    /* the ABOUT US content */
+    #article__about-content--group{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1em;
+    }
+
+    .card__about-content h1{
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .card__about-content p{
+        text-align: left;
+        padding: 0.5rem;
+        font-size: 20px;
+    }
+
+    .card__about-image{
+        max-width: 100%;
+        height: auto;
+        padding: 3rem;
+    }
+
+    .card__about-image img{
+        width: 35rem;
+        height: 25rem;
+    }
+
+/* the MISSION & VALUES content */
+    #article__mission-content--group{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding-top: 1em;
+    }
+
+    .card__mission-content h1{
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .card__mission-content p{
+        text-align: left;
+        padding: 0.5rem;
+        font-size: 20px;
+    }
+
+    .card__mission-image{
+       max-width: 100%;
+       height: auto; 
+       padding-bottom: 3em;
+       padding: 2rem;
+    }
+
+     .card__mission-image img{
+        width: 35rem;
+        height: 25rem;
+    }
+
+/* the MEET THE TEAM content */
+    #article__team-content--group{
+        padding-top: 1em;
+        padding-bottom: 1.5em;
+        padding: 1rem;
+    }
+
+    .card__team-content h1{
+        text-align: center;
+   }
+
+   .card__team-content p{
+        text-align: center;
+        font-size: 20px;
+   }
+
+/* the PROFILE PHOTOS content */
+    .card__list-profile{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .card__list-profile img:hover{
+        background-color: PeachPuff;
+        transform: scale(1.1);
     }
         
     .card__description-profile{
