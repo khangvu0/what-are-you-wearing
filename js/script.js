@@ -11,6 +11,8 @@ function validate(event){
     const form = document.getElementById('form');
     const amount = document.getElementById('amount');
     const card = document.getElementById('card');
+    const expiration = document.getElementById('expiration');
+    const cvc = document.getElementById('cvc');
     const firstName = document.getElementById('first-name');
     const lastName = document.getElementById('last-name');
     const email = document.getElementById('email');
@@ -24,6 +26,8 @@ function validate(event){
     // Regular expression variables
     const amountRegex = /^(?!0*(?:\.0{1,2})?$)(?:\d+|\.\d{1,2}|\d+\.\d{1,2})$/; 
     const cardRegex = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})$/;
+    const expirationRegex = /^(0[1-9]|1[0-2])\s?\/\s?\d{2}$/;
+    const cvcRegex = /^[0-9]{3,4}$/;
     const nameRegex = /^[a-zA-Z]{2,12}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const addressRegex = /^[\w\s,.'-]{3,100}$/;
@@ -53,6 +57,26 @@ function validate(event){
     } else {
         card.classList.remove('input-invalid');
         card.classList.add('input-valid');
+    }
+
+    if (!expirationRegex.test(expiration.value)) {
+        valid = false;
+        showError('expiration', 'Please enter a valid expiration date (MM/YY or MM / YY).');
+        expiration.classList.remove('input-valid');
+        expiration.classList.add('input-invalid');
+    } else {
+        expiration.classList.remove('input-invalid');
+        expiration.classList.add('input-valid');
+    }
+
+    if (!cvcRegex.test(cvc.value)) {
+        valid = false;
+        showError('cvc', 'Please enter a valid CVC (Visa, Mastercard, American Express and Discover).');
+        cvc.classList.remove('input-valid');
+        cvc.classList.add('input-invalid');
+    } else {
+        cvc.classList.remove('input-invalid');
+        cvc.classList.add('input-valid');
     }
 
     if (!nameRegex.test(firstName.value)) {
@@ -152,6 +176,8 @@ function validate(event){
         // Remove green/valid css styling
         amount.classList.remove('input-valid');
         card.classList.remove('input-valid');
+        cvc.classList.remove('input-valid');
+        expiration.classList.remove('input-valid');
         firstName.classList.remove('input-valid');
         lastName.classList.remove('input-valid');
         email.classList.remove('input-valid');

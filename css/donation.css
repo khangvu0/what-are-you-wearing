@@ -4,7 +4,6 @@
 
 body{
     background-color: whitesmoke;
-    margin-top: 1rem;
 }
 
 main {
@@ -40,6 +39,24 @@ p {
 .form--group {
     display: flex;
     flex-direction: column;
+}
+
+.donation--card-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#card-container,
+#email-container,
+#phone-container,
+#address-container,
+#city-container {
+    grid-column: 1 / span 2;
+}
+
+.donation--your-info {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .form--title,
@@ -131,13 +148,11 @@ p {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
-    .donation--form {
-        display: grid;
-        margin: auto auto 2rem auto;
-        width: 80vw;
-        grid-template-columns: 50% 50%;
-        grid-row-gap: 1rem;
-        grid-column-gap: 0.5rem;
+    #email-container,
+    #phone-container,
+    #address-container,
+    #city-container {
+        grid-column: unset;
     }
 
     .donation--welcome,
