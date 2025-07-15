@@ -66,7 +66,7 @@ article{
 }
 
 /* -------------------------- TABLET DESIGN ---------------------------------- */
-@media screen and (min-width: 600px) and (max-height:1440px){
+@media (min-width: 768px) and (max-width: 1024px){
 
 /* the ABOUT US content */
     #article__about-content--group{
@@ -147,7 +147,7 @@ article{
 }
 
 /* -------------------------- LAPTOP (SMALL) DESIGN ---------------------------------- */
-@media screen and (min-width: 1024px) and (max-width:1440){
+@media screen and (min-width: 1024px){
 
     /* the ABOUT US content */
     #article__about-content--group{
