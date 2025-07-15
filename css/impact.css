@@ -1,0 +1,136 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: "Avenir Next", sans-serif;
+}
+
+/* content */
+#content__causes--paragraph {
+  padding: 1em;
+}
+
+.heading__causes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: justify;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.heading__causes h1 {
+  padding: 0.5em;
+  color: black;
+  text-shadow: 1px 1px 4px rgb(246, 246, 48);
+}
+
+.heading__causes h2 {
+  padding: 0.5em;
+}
+
+.heading__causes p {
+  text-align: justify;
+}
+
+.causes__point h3 {
+  padding: 0.5em;
+}
+
+.causes__point p {
+  padding: 2em;
+}
+
+.causes__point h6 {
+  padding: 2em;
+  color: lightseagreen;
+}
+
+.causes__point {
+  float: left;
+  padding: 1rem;
+}
+
+.causes__img img {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+  transition: .5s ease;
+}
+
+.causes__img:hover {
+  opacity: 0.7;
+}
+
+#content__social--paragraph {
+  padding: 1em;
+}
+
+.social__point h3 {
+  padding: 0.5em;
+  text-align: justify;
+}
+
+.social__point p {
+  padding: 2em;
+}
+
+.social__point h6 {
+  padding: 2em;
+  color: lightseagreen;
+}
+
+.social__point {
+  float: left;
+  padding: 1rem;
+}
+
+#content__solutions--paragraph {
+  padding: 1em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.solutions__point h3 {
+  padding: 0.5em;
+  text-align: justify;
+}
+
+.solutions__point {
+  float: left;
+  padding: 1rem;
+}
+
+/* Practice From Zoom Meeting w Richard */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .body {
+    color: aliceblue;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .body {
+    color: rgb(93, 158, 18);
+  }
+.container{
+    width: 100%;
+    
+}
+  .causes__point {
+    width: 33%;
+  }
+
+  .social__point {
+    width: 33%;
+  }
+}
