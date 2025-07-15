@@ -8,8 +8,11 @@ function showError(id, message) {
 
 // Validation function
 function validate(event){
-    event.preventDefault(); // Prevent form submission to handle validation first
-    document.querySelectorAll('.error-message').forEach(div => div.textContent = '');
+    // Prevent form submission to handle validation first
+    event.preventDefault(); 
+
+    // Clears up previous error messages
+    document.querySelectorAll('.donation--error').forEach(div => div.textContent = '');
 
     // Form value variables
     const form = document.getElementById('form').value;
@@ -37,7 +40,6 @@ function validate(event){
 
     // Validation result variables
     let valid = true;
-    let errors = [];    // Array for all the error messages
 
     // Validate fields
     if (!amountRegex.test(amount)) {
@@ -110,9 +112,6 @@ function validate(event){
         showError('terms', 'You must agree to the terms and conditions');
     }
 
-    // Display errors
-    const errorMessages = document.getElementById('donation--error');
-    errorMessages.innerHTML = ''; // Clear any previous messages
     if (!valid) {
         errors.forEach((error) => {
             const errorElement = document.createElement('div');
