@@ -147,7 +147,20 @@ function validate(event){
 
     if (valid) { 
         alert('Form submitted successfully'); 
-        document.getElementById('form').reset();    //resets form
+        document.getElementById('form').reset();    // Resets form
+
+        // Remove green/valid css styling
+        amount.classList.remove('input-valid');
+        card.classList.remove('input-valid');
+        firstName.classList.remove('input-valid');
+        lastName.classList.remove('input-valid');
+        email.classList.remove('input-valid');
+        address.classList.remove('input-valid');
+        city.classList.remove('input-valid');
+        state.classList.remove('input-valid');
+        zip.classList.remove('input-valid');
+        phone.classList.remove('input-valid');
+        agreeTerms.classList.remove('input-valid');
     }
 }
 
