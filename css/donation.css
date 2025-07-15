@@ -107,6 +107,7 @@ p {
     font-weight: bold;
     border-radius: 5px;
     max-width: 30 vwß;
+    background-color: whitesmoke;
 }
 
 .input-valid {
@@ -148,6 +149,14 @@ p {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+    .donation--form {
+        margin: auto auto 2rem auto;
+        width: 60vw;
+        /* grid-template-columns: 10rem auto;
+        grid-row-gap: 1rem;
+        grid-column-gap: 0.5rem; */
+    }
+
     #email-container,
     #phone-container,
     #address-container,
