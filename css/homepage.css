@@ -136,7 +136,7 @@ footer {
 }
 
 /*-------------- media query code for desktop ---------------*/
-@media all and (min-width: 1025px) {
+@media all and (min-width: 1024px) {
     #main-img {
         padding: 1em;
         height: 55em;
