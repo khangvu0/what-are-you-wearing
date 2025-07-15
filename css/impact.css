@@ -8,8 +8,6 @@
 
 body {
   background-color: whitesmoke;
-  padding: 1rem;
-  margin-top: 1rem;
   font-family: "Avenir Next", sans-serif;
 }
 
@@ -64,7 +62,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 1em;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .causes__img:hover {
@@ -112,7 +110,7 @@ body {
 }
 
 /* Practice From Zoom Meeting w Richard */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .body {
     color: aliceblue;
   }
@@ -122,10 +120,9 @@ body {
   .body {
     color: rgb(93, 158, 18);
   }
-.container{
+  .container {
     width: 100%;
-    
-}
+  }
   .causes__point {
     width: 33%;
   }
