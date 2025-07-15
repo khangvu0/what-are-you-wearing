@@ -109,7 +109,7 @@ p {
 @media (min-width: 768px) and (max-width: 1024px) {
     .donation--form {
         margin: auto auto 2rem auto;
-        width: 30rem;
+        width: 80vw;
         grid-template-columns: 10rem auto;
         grid-row-gap: 1rem;
         grid-column-gap: 0.5rem;
@@ -135,9 +135,10 @@ p {
 /* For large devices */
 @media screen and (min-width: 1024px) {
     .donation--form {
+        display: grid;
         margin: auto auto 2rem auto;
-        width: 30rem;
-        grid-template-columns: 10rem auto;
+        width: 80vw;
+        grid-template-columns: 50% 50%;
         grid-row-gap: 1rem;
         grid-column-gap: 0.5rem;
     }
